@@ -1,0 +1,6 @@
+:root {
+    --site-color : #f3b64b;
+}
+.bg-site-color{
+    background-color: var(--site-color);
+}
