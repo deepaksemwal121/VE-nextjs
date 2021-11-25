@@ -1,0 +1,30 @@
+.navbar__menu {
+  margin-left: 1rem;
+  display: none;
+  position: relative;
+}
+
+@media screen and (max-width: 770px) {
+  .navbar__menu {
+    display: flex;
+  }
+  .navbar__menu .menu__small {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: end;
+    background: yellow;
+    padding: 2rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+  }
+  .menu__desktop {
+    display: none;
+  }
+}
