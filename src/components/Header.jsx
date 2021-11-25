@@ -30,13 +30,13 @@ function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
     <div className="w-full flex p-2" style={{ backgroundColor: "#f3b64b" }}>
-      <div className="flex w-1/4 items-center">
-        <img className="w-40 h-20" src={images.logo} alt="" />
+      <div className="flex  items-center">
+        <img className="w-40" src={images.logo} alt="" />
       </div>
       <div className="menu__desktop  flex w-3/4 justify-center items-center p-10">
         <Menu />
       </div>
-      <div className=" w-1/4 flex items-center px-5">
+      <div className=" w-1/4 flex justify-around items-center px-5">
         <button
           style={{
             background: "black",

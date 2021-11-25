@@ -8,21 +8,26 @@ const ServiceHeader = () => {
         <p className="text-3xl md:text-5xl  text-center">
           DIABETES HEALTH PLATFORM
         </p>
-        <p className="border-b-2 w-2/3 hidden md:grid md:grid-cols-7 md:gap-0 md:place-items-center items-center my-3 p-4 ">
-          <span className="mx-2 ">Trustworthy</span>
-          <span>
-            <BsCircleFill />
-          </span>
-          <span className="mx-2">Judgement-free</span>
-          <span>
-            <BsCircleFill />
-          </span>
-          <span className="mx-2">Judgement-free</span>
-          <span>
-            <BsCircleFill />
-          </span>
-          <span className="mx-2">Judgement-free</span>
-        </p>
+        <div className=" hidden md:grid md:place-items-center">
+          <div className="flex">
+            <div className="flex items-center p-2">
+              <div className="rounded-full bg-gray bg-yellow-200  w-4 h-4 mr-4"></div>
+              <p className="text-center text-lg">Zero Side-effects</p>
+            </div>
+            <div className="flex items-center p-2">
+              <div className="rounded-full bg-gray bg-yellow-200  w-4 h-4 mr-4"></div>
+              <p className="text-center text-lg">Ayurvedic</p>
+            </div>
+            <div className="flex items-center p-2">
+              <div className="rounded-full bg-gray bg-yellow-200  w-4 h-4 mr-4"></div>
+              <p className="text-center text-lg">Liberal</p>
+            </div>
+            <div className="flex items-center p-2">
+              <div className="rounded-full bg-gray bg-yellow-200 w-4 h-4 mr-4"></div>
+              <p className="text-center text-lg">Liberal</p>
+            </div>
+          </div>
+        </div>
         <div className=" w-3/4 gap-4 grid grid-cols-1 md:grid-cols-2  place-items-center">
           <img src={images.serviceHead} />
           <div className="grid grid-cols-1 md:p-5">
