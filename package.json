@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@woocommerce/woocommerce-rest-api": "^1.0.1",
+    "daisyui": "^1.16.2",
     "next": "latest",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
