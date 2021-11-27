@@ -1,12 +1,12 @@
 import { getURL } from "next/dist/shared/lib/utils";
-import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
-import "react-awesome-slider/dist/styles.css";
 import { images } from "../../constants/constant";
+import ElementCard from "../../reUseComponent/ElementCard";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/free-mode";
+import Testimonial from "../Testimonial";
 
 const ProductLongDesc = () => {
-  const AutoplaySlider = withAutoplay(AwesomeSlider);
-
   const helpsData = [
     {
       title: "TRETS DIABETES & LOWER BLOOD SUGAR LEVELS",
@@ -40,23 +40,57 @@ const ProductLongDesc = () => {
     },
   ];
 
+  const ingDetails = [
+    {
+      name: "Jamun",
+      desc: "Jamun seeds contain alkaloids, which convert starch into energy and helps in reducing diabetes symptoms like constantly feeling thirsty and frequent urination",
+      image: images.jamunn,
+    },
+    {
+      name: "Neem",
+      desc: "Neem has been known to  reducing sugar levels in people with type 2 diabetes. ",
+      image: images.neem,
+    },
+    {
+      name: "Chirata",
+      desc: "Chirata is well known for its many healing benefits. It maintains the blood sugar levels",
+      image: images.chirata,
+    },
+    {
+      name: "Gudmar",
+      desc: "Gudmar is used for diabetes, metabolic syndrome, weight loss, and cough.",
+      image: images.gudmar,
+    },
+    {
+      name: "Ajwain",
+      desc: "Ajwain can play an important role in controlling your blood sugar.",
+      image: images.ajwain,
+    },
+    {
+      name: "Amla",
+      desc: "Amla berries are rich in antioxidants, which reduce the risk of chronic health conditions like heart disease, diabetes, and cancer.",
+      image: images.amla,
+    },
+    {
+      name: "Tulsi",
+      desc: "Tulsi has been shown to counter metabolic stress through normalization of blood glucose, blood pressure and lipid levels",
+      image: images.tulsi,
+    },
+    {
+      name: "Karela",
+      desc: "Karela lowers the blood sugar level as it has properties that act like insulin, which helps bring glucose into the cells for energy. ",
+      image: images.karela,
+    },
+    {
+      name: "Methika",
+      desc: "Methika carries with it loads of benefits. It improves cardiovascular health by controlling blood pressure and reducing cholesterol;",
+      image: images.methika,
+    },
+  ];
+
   return (
     <div>
-      {/* Testimonials */}
-      <div>
-        <AutoplaySlider
-          play={true}
-          cancelOnInteraction={false} // should stop playing on user interaction
-          organicArrows={false}
-          mobileTouch
-          interval={6000}
-        >
-          <div data-src={images.testimonial1} />
-          <div data-src={images.testimonial2} />
-          <div data-src={images.testimonial3} />
-          <div data-src={images.testimonial4} />
-        </AutoplaySlider>
-      </div>
+      <Testimonial />
       {/* how it helps section */}
       <div className="mt-12 bg-site-color py-8">
         <div className="text-3xl font-semibold text-center">How It Helps ?</div>
@@ -106,9 +140,9 @@ const ProductLongDesc = () => {
             height=""
             src="https://www.youtube.com/embed/AM5MgWN5C8c"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </div>
@@ -121,6 +155,29 @@ const ProductLongDesc = () => {
         className="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500  px-24 py-14"
       >
         hello workd
+      </div>
+      <div className="md:px-30 md:py-15 py-20 bg-red-300">
+        <Swiper
+          className="p-20"
+          slidesPerView={2.5}
+          spaceBetween={20}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+        >
+          {ingDetails.map((item, index) => {
+            return (
+              <SwiperSlide>
+                <ElementCard
+                  eName={item.name}
+                  description={item.desc}
+                  image={item.image}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
+import "swiper/css";
+import "tailwindcss/tailwind.css";
+import "../index.css";
 
-import 'tailwindcss/tailwind.css'
-import '../index.css';
-
-import WooCommerce from '../config/WooCommerce.server'
-
+import WooCommerce from "../config/WooCommerce.server";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

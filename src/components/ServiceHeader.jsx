@@ -36,15 +36,7 @@ const ServiceHeader = () => {
               offering accessible, personalized and confidential healthcare
               solutions.
             </p>
-            <button
-              className=" md:w-1/2 my-5"
-              style={{
-                background: "black",
-                color: "white",
-                padding: "0.7rem 2rem",
-                borderRadius: "5px",
-              }}
-            >
+            <button className="bg-black rounded-md px-5 py-2 w-full text-white my-4">
               Book Appointment
             </button>
           </div>
