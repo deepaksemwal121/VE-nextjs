@@ -11,24 +11,21 @@ const ProductCard = ({ product }) => {
 
   return (
     <div>
-      <Link href={`/${handle}`}>
-        <a className="group">
-          <div className="w-full bg-gray-200 rounded-3xl overflow-hidden">
-            <div className="relative group-hover:opacity-75 h-72">
-              <Image src={originalSrc} alt="" layout="fill" objectFit="cover" />
-            </div>
+      <a className="group">
+        <div className="w-full bg-gray-200 rounded-3xl overflow-hidden">
+          <div className="relative group-hover:opacity-75 h-72">
+            <Image src={originalSrc} alt="" layout="fill" objectFit="cover" />
           </div>
-          <h3 className="mt-4 text-lg font-medium text-gray-900">{title}</h3>
-          <p className="mt-1 text-sm text-gray-700">
-            {formatter.format(price)}
-          </p>
-          <div className="">{product.node.variants.edges[0].node.title}</div>
-        </a>
-      </Link>
-      <button className="bg-black rounded-md px-5 py-2 w-full text-white my-4">
-        Add To Cart
-      </button>
-      <ShopVariants variant={product.variants.edges} />
+        </div>
+        <h3 className="mt-4 text-lg font-medium text-gray-900">{title}</h3>
+        <p className="mt-1 text-sm text-gray-700">{formatter.format(price)}</p>
+        <div className="">{product.node.variants.edges[0].node.title}</div>
+      </a>
+      <a className="bg-black rounded-md px-5 py-2 w-full text-white my-5">
+        View Product
+      </a>
+
+      {/* <ShopVariants variant={product.node.variants.edges} /> */}
     </div>
   );
 };

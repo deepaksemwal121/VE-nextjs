@@ -17,7 +17,6 @@ const products = ({ products }) => {
             {products.map((product) => (
               <ProductCard key={product.node.id} product={product} />
             ))}
-            
           </div>
         </div>
       </div>
@@ -27,9 +26,9 @@ const products = ({ products }) => {
 
 export default products;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const products = await getAllProducts();
-
+  console.log(products);
   return {
     props: { products }, // will be passed to the page component as props
   };

@@ -47,10 +47,12 @@ export async function getAllProducts() {
               node {
                 id
                 title
+                price
+                compareAtPrice
               }
             }
           }
-        images(first: 5) {
+        images(first: 10) {
           edges {
             node {
               originalSrc
