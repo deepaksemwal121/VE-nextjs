@@ -1,9 +1,6 @@
 const Programs = ({ heading, description }) => {
   return (
     <div className=" px-10 py:8 md:px-40 md:py-16">
-      <h2 className="text-2xl font-bold md:text-3xl p-6 text-center">
-        OUR ONGOING PROGRAMS{" "}
-      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 items-center  container">
         <div className="image">
           <img

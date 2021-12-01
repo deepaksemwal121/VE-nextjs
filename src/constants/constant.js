@@ -1,5 +1,6 @@
 export const images = {
-  logo: "assets/logo-rec.webp",
+  logo: "/assets/logo-rec.webp",
+  hero: "/assets/hero.png",
   serviceHead:
     "https://proactiveforher.com/static/media/platform.ac28d72b.webp",
   gmpImage: "/assets/gmpimg.webp",

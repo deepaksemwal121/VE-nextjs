@@ -6,7 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.2.1",
     "@woocommerce/woocommerce-rest-api": "^1.0.1",
+    "dotenv": "^10.0.0",
     "next": "latest",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
