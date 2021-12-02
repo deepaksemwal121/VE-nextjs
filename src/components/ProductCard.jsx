@@ -4,29 +4,29 @@ import { formatter } from "../../utils/helpers";
 import ShopVariants from "./header/ShopVariants";
 
 const ProductCard = ({ product }) => {
-  const { handle, title } = product.node;
-
-  const originalSrc = product.node.images.edges[0].node.originalSrc;
-  const price = product.node.priceRange.minVariantPrice.amount;
+  const originalSrc = product.images.edges[0].node.originalSrc;
+  const price = product.priceRange.minVariantPrice.amount;
 
   return (
-    <div>
+    <Link  key={product.id} href={`/shop/${product.handle}`}>
       <a className="group">
         <div className="w-full bg-gray-200 rounded-3xl overflow-hidden">
           <div className="relative group-hover:opacity-75 h-72">
             <Image src={originalSrc} alt="" layout="fill" objectFit="cover" />
           </div>
         </div>
-        <h3 className="mt-4 text-lg font-medium text-gray-900">{title}</h3>
+        <h3 className="mt-4 text-lg font-medium text-gray-900">
+          {product.title}
+        </h3>
         <p className="mt-1 text-sm text-gray-700">{formatter.format(price)}</p>
-        <div className="">{product.node.variants.edges[0].node.title}</div>
+        <div className="">{product.variants.edges[0].node.title}</div>
       </a>
-      <a className="bg-black rounded-md px-5 py-2 w-full text-white my-5">
+      {/* <a className="bg-black rounded-md px-5 py-2 w-full text-white my-5">
         View Product
-      </a>
+      </a> */}
 
       {/* <ShopVariants variant={product.node.variants.edges} /> */}
-    </div>
+    </Link>
   );
 };
 

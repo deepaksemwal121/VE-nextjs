@@ -2,6 +2,7 @@ import { AiFillStar, AiFillAmazonSquare } from "react-icons/ai";
 import { SiFlipkart } from "react-icons/si";
 import { BsStarHalf } from "react-icons/bs";
 import Header from "../../components/Header";
+import { useState } from "react";
 import ProductShortDesc from "../../components/header/ProductShortDesc.client";
 import ProductVariation from "../../components/header/ProductVariation.client";
 import ProductCarousel from "../../components/ProductCarousel";
@@ -9,6 +10,7 @@ import { getAllProducts } from "../../config/Shopifyconfig";
 import ProductLongDesc from "../../components/header/ProductLongDesc.client";
 
 const product = ({ product }) => {
+
   const imgSrc = product.node.images.edges;
   const productDetails = product.node.title;
   const productVar = product.node.variants.edges;
@@ -60,10 +62,9 @@ const product = ({ product }) => {
 };
 
 export default product;
+
 export async function getServerSideProps(context) {
   const products = await getAllProducts();
-  console.log("Hello from product page");
-  console.log(products);
   return {
     props: { product: products[0] }, // will be passed to the page component as props
   };

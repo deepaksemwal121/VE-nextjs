@@ -1,6 +1,6 @@
 import { SHOPIFY_STOREFRONT_ACCESSTOKEN, SHOPIFY_STORE_DOMAIN } from "./config";
 
-async function ShopifyData(query) {
+async function ShopifyData({ query, variable }) {
   const URL = `https://${SHOPIFY_STORE_DOMAIN}/api/2021-07/graphql.json`;
 
   const options = {
